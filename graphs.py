@@ -15,7 +15,6 @@ def chart_view(data, forecasts):
 
     chart = QChart()
     chart.setTheme(QChart.ChartThemeDark)
-    # chart.setBackgroundVisible(False)
 
     chart.addSeries(series)
     chart.addSeries(fseries)
@@ -25,5 +24,7 @@ def chart_view(data, forecasts):
 
     chartview = QChartView(chart)
     chartview.setRenderHint(QPainter.Antialiasing)
+    chartview.setStyleSheet("background-color: rgba(0.0, 0.0, 0.0, 0.0); border-radius: 5px")
+    # chart.setBackgroundVisible(False)
 
     return chartview
